@@ -1,0 +1,12 @@
+<p>
+  user-list works!
+</p>
+<ul>
+       <li *ngFor="let user of userList">
+       <!-- HERE: add an element with click event binding -->
+         <a href="#" (click)="selectUser(user)">
+            {{user.fullName}}
+         </a>
+       </li>
+    </ul>
+    <app-user-details [user]="selectedUser"></app-user-details>
